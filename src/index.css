@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    background-color: #FFFAFA;
+}
+
+h1 a {
+  font-size: 2em;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-size: medium;
+}
+
+/*effect-underline*/
+a.effect-underline {
+  position: relative;
+  display: inline-block;
+}
+
+a.effect-underline:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0; 
+  display: inline-block;
+  height: 1px; 
+  width: 100%;
+  background: currentColor;
+  opacity: 0;
+  transform: scaleX(0); 
+  transform-origin: left; 
+  transition: opacity 0.35s, transform 0.35s; 
+}
+
+a.effect-underline:hover:after {
+  opacity: 1;
+  transform: scaleX(1); 
+}
+
+
+span.growing { 
+    background-color: #fd2c2a;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    position: fixed;
+    transition:all;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Prevent cursor from blocking interactions */
+    transform: translate(-50%, -50%); /* Align center of cursor with mouse pointer */
+    z-index: 20;
+  }
+
+
+  .char {
+    transform: translateY(115px);
+    transition: transform .5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  
+
+  
